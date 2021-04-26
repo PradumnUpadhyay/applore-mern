@@ -2,7 +2,7 @@
 export default function validateData(values) {
     let errors={}
    console.log(values,Object.keys(values)[0].includes('order'),Object.keys(values))
-   if(Object.keys(values)[0].includes('order')===false) {
+   if(Object.keys(values)[0].includes('order').toString() === 'false') {
     if(!values.email.trim()){
         errors.email="Email required"
     } else if(!/\S+@\S+\.\S+/.test(values.email)){
@@ -26,7 +26,7 @@ export default function validateData(values) {
         }
     }
 }
-
+else {
 
         if(!values.orderName.trim()) {
             errors.orderName='Order Name is required'
@@ -38,7 +38,7 @@ export default function validateData(values) {
             errors.orderStatus='Order Status is required'
         }
     
-
-    console.log(errors)
+}
+    console.log("Errors",errors)
     return errors
 }
