@@ -106,9 +106,9 @@ const UpdateOrder=(props)=> {
   {errors.orderStatus && <p>{errors.orderStatus}</p>}
 </div>
 
-<Button as='button' type='submit' className="btn btn-primary">
+<button type='submit' className="btn btn-primary">
         Update Order
-</Button><br/>
+</button><br/>
 <button onClick={()=> setDisplay(true)} className="btn btn-outline-primary">Display Order</button>
 </form>
 </div>
