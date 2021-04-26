@@ -2,7 +2,7 @@
 export default function validateData(values) {
     let errors={}
    console.log(values,Object.keys(values)[0].includes('order'),Object.keys(values))
-   if(!Object.keys(values)[0].includes('order')) {
+   if(Object.keys(values)[0].includes('order')===false) {
     if(!values.email.trim()){
         errors.email="Email required"
     } else if(!/\S+@\S+\.\S+/.test(values.email)){
