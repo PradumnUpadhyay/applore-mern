@@ -1,8 +1,5 @@
 import axios from 'axios'
 import React, { useEffect, useState } from 'react'
-import {
-    Container, Button, Form
-} from 'react-bootstrap'
 import { Redirect } from 'react-router'
 import { Link } from 'react-router-dom'
 import DisplayOrders from '../Display/DisplayOrders'
