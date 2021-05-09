@@ -113,7 +113,7 @@ constructor(props) {
           })
          
 }
-    }><Redirect to='/login'>Logout</Redirect></button>
+    }><Link to='/login'>Logout</Link></button>
       </div>
 
       <div className="container">
