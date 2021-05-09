@@ -104,12 +104,16 @@ constructor(props) {
           <Link to='/create' className="btn btn-success">Create Order</Link>
       </div>
           <div className="container">
-          <button className="btn btn-danger" onClick={async () => await axios.post('https://applore-mern-stack.herokuapp.com/users/logout',{
+          <button className="btn btn-danger" onClick={async () => {
+                await axios.post('https://applore-mern-stack.herokuapp.com/users/logout',{
               headers:{
                   'Content-Type':'application/json',
                   'Authorization':'Bearer '+localStorage.getItem('token')
               }
-          })}>Logout</button>
+          })
+         
+}
+    }><Redirect to='/login'>Logout</Redirect></button>
       </div>
 
       <div className="container">
